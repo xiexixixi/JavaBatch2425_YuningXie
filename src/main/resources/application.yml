@@ -1,0 +1,16 @@
+
+spirng:
+  datasource:
+    url: jdbc:mysql://${RDS_HOSTSNAME:localhost}:${RDS_PORT:3306}/${RDS_DB_NAME:AntraHomework}
+    username: ${RDS_USERNAME:admin}
+    password: ${RDS_PASSWORD:123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+      show-sql:
+      hibernate:
+        ddl-auto:update: update
+
