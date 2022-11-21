@@ -10,7 +10,4 @@ public interface ProductRepository extends JpaRepository<ProductItem, Integer> {
     @Query("SELECT p FROM ProductItem as p WHERE p.id = ?1")
     Optional<ProductItem> findByProductIem(Integer pid);
 
-
-
-
 }

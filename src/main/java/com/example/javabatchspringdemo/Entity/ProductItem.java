@@ -5,10 +5,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.sql.Date;
 
 @Entity
 @Table
+@Data
 @Setter
 @Getter
 @ToString
@@ -19,6 +22,9 @@ public class ProductItem {
     @GeneratedValue
     private int id;
 
+    @Column(name = "product_name")
+    @Size(max = 30)
+//    @NotNull
     private String name;
 
     @Column(name = "create_time")
